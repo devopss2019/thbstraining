@@ -19,6 +19,7 @@ public class NewTest {
 	 
  @BeforeTest
  public  void launshSite() {
+	 System.out.println("***** launch site ");
 	 System.setProperty("webdriver.chrome.driver", "D:/CoE/BootcampTraining/Test/chromedriver_win32/chromedriver.exe");
 	  driver = new org.openqa.selenium.chrome.ChromeDriver();
 	 driver.get("http://www.google.co.in");
@@ -26,6 +27,7 @@ public class NewTest {
    
   @Test
   public void enterText() {
+	   System.out.println("***** enter text ");
 	  WebElement e1 = driver.findElement(By.name("q"));
       e1.sendKeys("Selenium");
       e1.submit();
@@ -33,13 +35,14 @@ public class NewTest {
       
   @Test
   public void waitFor() {
+	  System.out.println("***** driver waiting to close for 10 sec ");
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
      
   }
   
   @AfterTest
   public void afterTest() {
-	  System.out.println("----------------driver is closed now");
+	  System.out.println("***** driver is closed ");
 	  driver.close();
   }
 
