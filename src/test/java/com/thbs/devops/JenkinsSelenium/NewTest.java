@@ -39,7 +39,7 @@ public class NewTest {
   
   @AfterTest
   public void afterTest() {
-	  Sytem.out.println("----------------driver is closed now");
+	  System.out.println("----------------driver is closed now");
 	  driver.close();
   }
 
